@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -108,7 +109,7 @@ export default function FinalCTA() {
           className="group relative px-10 py-4 bg-white text-black font-semibold text-lg rounded-lg hover:bg-white/90 transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30"
         >
           Start Your Journey
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block" />
         </button>
       </div>
     </section>

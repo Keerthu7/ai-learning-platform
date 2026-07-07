@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { ArrowDown } from 'lucide-react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -80,8 +81,8 @@ export default function Section5() {
 
               {/* Arrow separator */}
               {index < abilities.length - 1 && (
-                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/30 text-xl">
-                  ↓
+                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/30">
+                  <ArrowDown className="w-6 h-6" />
                 </div>
               )}
             </div>

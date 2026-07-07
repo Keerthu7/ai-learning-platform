@@ -28,21 +28,6 @@ export default function Navigation() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#vision" className="text-white/60 hover:text-white text-sm transition-colors">
-            Vision
-          </Link>
-          <Link href="#journey" className="text-white/60 hover:text-white text-sm transition-colors">
-            Journey
-          </Link>
-          <Link href="#technology" className="text-white/60 hover:text-white text-sm transition-colors">
-            Technology
-          </Link>
-          <Link href="#community" className="text-white/60 hover:text-white text-sm transition-colors">
-            Community
-          </Link>
-          <Link href="#careers" className="text-white/60 hover:text-white text-sm transition-colors">
-            Careers
-          </Link>
         </div>
 
         <div className="flex items-center gap-4">

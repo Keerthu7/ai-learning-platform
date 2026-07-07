@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { ArrowDown } from 'lucide-react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -57,7 +58,7 @@ export default function Section2() {
                 {item}
               </div>
               {index < timelineItems.length - 1 && (
-                <div className="text-white/30 text-2xl">↓</div>
+                <div className="text-white/30"><ArrowDown className="w-8 h-8" /></div>
               )}
             </div>
           ))}

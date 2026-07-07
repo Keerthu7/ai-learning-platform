@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import gsap from 'gsap'
 
 export default function HeroSection() {
@@ -120,7 +121,7 @@ export default function HeroSection() {
           className="mt-14 px-8 py-3 bg-white text-black font-semibold text-base rounded-lg hover:bg-white/90 transition-all duration-300 flex items-center gap-2 mx-auto group hover:shadow-lg hover:shadow-white/20"
         >
           Begin
-          <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
         </button>
       </div>
 

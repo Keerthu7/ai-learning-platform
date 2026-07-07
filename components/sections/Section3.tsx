@@ -2,18 +2,19 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { Bot, Sparkles, BarChart2, TrendingUp, Target, Code2 } from 'lucide-react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const fragments = [
-  { label: 'AI Mentor', icon: '🤖' },
-  { label: 'Project Generated', icon: '✨' },
-  { label: 'Resume Score', icon: '📊' },
-  { label: 'GitHub Graph', icon: '📈' },
-  { label: 'Portfolio', icon: '🎯' },
-  { label: 'Coding Window', icon: '💻' },
+  { label: 'AI Mentor', icon: <Bot className="w-8 h-8" /> },
+  { label: 'Project Generated', icon: <Sparkles className="w-8 h-8" /> },
+  { label: 'Resume Score', icon: <BarChart2 className="w-8 h-8" /> },
+  { label: 'GitHub Graph', icon: <TrendingUp className="w-8 h-8" /> },
+  { label: 'Portfolio', icon: <Target className="w-8 h-8" /> },
+  { label: 'Coding Window', icon: <Code2 className="w-8 h-8" /> },
 ]
 
 export default function Section3() {
@@ -55,7 +56,7 @@ export default function Section3() {
               className="group relative"
             >
               <div className="relative bg-white/5 backdrop-blur border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-all duration-300 h-32 flex flex-col items-center justify-center cursor-pointer">
-                <div className="text-4xl mb-3">{frag.icon}</div>
+                <div className="mb-3 text-blue-400">{frag.icon}</div>
                 <div className="text-white/70 text-sm text-center group-hover:text-white transition-colors">
                   {frag.label}
                 </div>

@@ -2,20 +2,21 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { Circle, LineChart, Diamond, Star, Square, CheckCircle, CircleDot, Zap } from 'lucide-react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const dashboards = [
-  { title: 'Progress Ring', icon: '◯' },
-  { title: 'Learning Graph', icon: '📈' },
-  { title: 'Skill Radar', icon: '◆' },
-  { title: 'XP Counter', icon: '★' },
-  { title: 'Portfolio Status', icon: '▢' },
-  { title: 'Interview Score', icon: '✓' },
-  { title: 'Project Completion', icon: '●' },
-  { title: 'Resume Score', icon: '⚡' },
+  { title: 'Progress Ring', icon: <Circle className="w-8 h-8" /> },
+  { title: 'Learning Graph', icon: <LineChart className="w-8 h-8" /> },
+  { title: 'Skill Radar', icon: <Diamond className="w-8 h-8" /> },
+  { title: 'XP Counter', icon: <Star className="w-8 h-8" /> },
+  { title: 'Portfolio Status', icon: <Square className="w-8 h-8" /> },
+  { title: 'Interview Score', icon: <CheckCircle className="w-8 h-8" /> },
+  { title: 'Project Completion', icon: <CircleDot className="w-8 h-8" /> },
+  { title: 'Resume Score', icon: <Zap className="w-8 h-8" /> },
 ]
 
 export default function Section7() {
@@ -82,7 +83,7 @@ export default function Section7() {
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col items-center justify-center p-4">
-                  <div className="text-3xl mb-2 opacity-70 group-hover:opacity-100 transition-opacity">
+                  <div className="mb-2 opacity-70 group-hover:opacity-100 transition-opacity text-blue-400">
                     {dash.icon}
                   </div>
                   <div className="text-white/60 text-xs text-center font-medium group-hover:text-white/80 transition-colors">
