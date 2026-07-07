@@ -17,15 +17,15 @@ export default function Section1() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
-        end: '+=4000', // Pinned for a much longer scroll distance
+        end: '+=800', // Pinned for a short scroll distance (approx 1 scroll)
         scrub: 1,
         pin: true,
         markers: false,
       }
     })
 
-    // 1. Hold first text for a very long time (simulating 1 minute of scrolling)
-    tl.to({}, { duration: 10 })
+    // 1. Hold first text briefly
+    tl.to({}, { duration: 2 })
     
     // 2. Fade in second text below it
     .to('#second-text', {
@@ -47,12 +47,12 @@ export default function Section1() {
       <div className="max-w-4xl text-center flex flex-col items-center justify-center gap-12">
         <div
           ref={textRef}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
         >
           Education teaches subjects.<br/>AI demands builders.
         </div>
         <div
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-500 leading-tight opacity-0 translate-y-8"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-500 leading-tight opacity-0 translate-y-8"
           id="second-text"
         >
           We don't teach AI.<br/>We build AI Engineers.

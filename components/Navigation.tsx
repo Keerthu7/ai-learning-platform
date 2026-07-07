@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import RegistrationModal from './RegistrationModal'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,11 +36,19 @@ export default function Navigation() {
           <button className="text-white/60 hover:text-white text-sm transition-colors">
             Login
           </button>
-          <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded transition-colors">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded transition-colors"
+          >
             Join Beta
           </button>
         </div>
       </div>
+
+      <RegistrationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </nav>
   )
 }
