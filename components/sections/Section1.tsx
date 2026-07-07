@@ -16,23 +16,33 @@ export default function Section1() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: 'top center',
-        end: 'center center',
+        start: 'top top',
+        end: '+=1500',
         scrub: 1,
+        pin: true,
         markers: false,
       }
     })
 
-    tl.to(textRef.current, {
+    // 1. Hold first text
+    tl.to({}, { duration: 1 })
+    
+    // 2. Fade out first text
+    .to(textRef.current, {
       opacity: 0,
       duration: 0.5,
       ease: 'power2.inOut',
     })
+    
+    // 3. Fade in second text
     .to('#second-text', {
       opacity: 1,
       duration: 0.5,
       ease: 'power2.inOut',
     })
+    
+    // 4. Hold second text
+    .to({}, { duration: 1 })
   }, [])
 
   return (
